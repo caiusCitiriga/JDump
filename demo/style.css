@@ -1,0 +1,48 @@
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.jumbotron {
+    height: 100%;
+    padding-top: 0 !important;
+    background-color: #eee
+}
+
+.display-4 {
+    color: #007bff;
+    background-color: #333;
+    padding: 10px;
+    margin-left: -32px;
+    margin-right: -32px
+}
+
+.json-area {
+    width: 100%;
+    resize: none;
+    height: 300px;
+    outline: none;
+    color: #eee;
+    font-size: 25px;
+    border-radius: 5px;
+    background-color: #333;
+    border: 3px solid #fff;
+    padding: 20px;
+}
+
+.error {
+    opacity: 0;
+    color: #eee;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 7px;
+    border: 3px solid #fff;
+    border-bottom: none;
+    background-color: #E53935;
+    transition: opacity 120ms ease-in-out;
+}
+
+.error.show {
+    opacity: 1;
+}

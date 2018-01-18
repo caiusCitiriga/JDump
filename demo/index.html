@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" style="height: 100%;">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JDump Demo</title>
-
+    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -20,15 +20,24 @@
     <script src="index.js"></script>
 </head>
 
-<body style="height: 100%;">
-    <div class="jumbotron" style="height:100%">
-        <h1 class="display-4">JDump</h1>
-        <p class="lead">The object dumper you were missing.</p>
+<body>
+    <div class="jumbotron" id="jumbo">
+        <h1 class="display-4">
+            <strong style="color:#ffbf10;">J</strong>Dump
+            <p class="lead" style="color: #bebebe; font-family: monospace">// The object dumper you were missing.</p>
+        </h1>
         <hr class="my-4">
-        <p>JDump is a graphical object dumper. You can pass in any object at any time in your code, and when the dumper line
-            will be executed, a modal will appear allowing you to inspect your object.</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" onclick="dump()" role="button">Test dump</a>
+        <p style="font-size: 20px; padding: 20px;">
+            <strong>JDump is a graphical object dumper.</strong>
+            <br>You can pass in any object at any time in your code, and when the dumper line will be executed, a modal will
+            appear allowing you to inspect your object.
+        </p>
+        <p class="lead" style="color: #eee">
+            <h4 id="error" class="error">Invalid object, check syntax</h4>
+            <textarea class="json-area" id="object" onclick="startListeners()">{}</textarea>
+        </p>
+        <p class="lead" style="color: #eee">
+            <a class="btn btn-block btn-primary btn-lg" onclick="dump()" role="button">Test dump</a>
         </p>
     </div>
 </body>
