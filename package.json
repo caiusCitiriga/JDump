@@ -1,0 +1,19 @@
+{
+    "name": "JDumper",
+    "version": "1.0.0",
+    "description": "",
+    "main": "webpack.config.js",
+    "scripts": {
+        "build": "webpack"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "typescript": "^2.5.2"
+    },
+    "devDependencies": {
+        "ts-loader": "^2.3.7",
+        "webpack": "^3.6.0",
+        "webpack-dev-server": "^2.8.2"
+    }
+}
